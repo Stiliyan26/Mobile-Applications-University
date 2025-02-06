@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My First Application</string>
+    <string name="fi_lip">Fi-Lip!</string>
+    <string name="button_hello">Button Hello</string>
+</resources>
