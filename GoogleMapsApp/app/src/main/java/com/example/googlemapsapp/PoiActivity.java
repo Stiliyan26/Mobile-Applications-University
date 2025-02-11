@@ -3,6 +3,7 @@ package com.example.googlemapsapp;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
+
 public class PoiActivity extends AppCompatActivity {
 
     @Override

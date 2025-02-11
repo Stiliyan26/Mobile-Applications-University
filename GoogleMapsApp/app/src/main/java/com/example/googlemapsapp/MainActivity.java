@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         mapBtn.setOnClickListener(v ->
-                startActivity(new Intent(MainActivity.this, MapsActivity.class)));
+                startActivity(new Intent(MainActivity.this, GoogleMapsActivity.class)));
 
         poiBtn.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, PoiActivity.class)));
