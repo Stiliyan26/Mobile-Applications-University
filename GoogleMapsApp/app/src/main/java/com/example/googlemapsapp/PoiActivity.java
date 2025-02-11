@@ -1,6 +1,8 @@
 package com.example.googlemapsapp;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.util.Log;
 import android.widget.Button;
@@ -16,11 +18,16 @@ import com.google.android.gms.maps.model.*;
 public class PoiActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-
+    private float zoomvar = 10;
+    
     private final LatLng TUsofia = new LatLng(42.6570607, 23.3551086);
     private final LatLng unss = new LatLng(42.651266, 23.3466593);
     private final LatLng lty = new LatLng(42.6537179, 23.3564474);
     private final LatLng nsa = new LatLng(42.6484442, 23.3466905);
+
+    private final LatLng SofiaLibrary = new LatLng(42.696897, 23.325877);
+    private final LatLng SofiaUniversity = new LatLng(42.693978, 23.334181);
+    private final LatLng IvanVazovTheater = new LatLng(42.694978, 23.324604);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,33 +58,61 @@ public class PoiActivity extends FragmentActivity implements OnMapReadyCallback 
         Log.i("PoiActivity", "onMapReady() TRIGGERED");
         mMap = googleMap;
 
+        MarkerOptions markerOptions = new MarkerOptions()
+                .position(TUsofia)
+                .title("ТУ София")
+                .icon(resizeBitmap(R.drawable.tu, 100, 100))
+                .rotation(20)
+                .draggable(false);
+
+        mMap.addMarker(markerOptions);
         // Add markers for points of interest
-        addMarker(TUsofia, "TU Sofia", BitmapDescriptorFactory.HUE_BLUE);
+//        addMarker(TUsofia, "TU Sofia", BitmapDescriptorFactory.HUE_BLUE);
         addMarker(unss, "UNSS", BitmapDescriptorFactory.HUE_RED);
         addMarker(lty, "LTY", BitmapDescriptorFactory.HUE_YELLOW);
         addMarker(nsa, "HCA", BitmapDescriptorFactory.HUE_GREEN);
+        addMarker(SofiaLibrary, "Sofia Library", BitmapDescriptorFactory.HUE_ORANGE);
+        addMarker(SofiaUniversity, "Sofia University", BitmapDescriptorFactory.HUE_AZURE);
+        addMarker(IvanVazovTheater, "Ivan Vazov Theater", BitmapDescriptorFactory.HUE_VIOLET);
 
         // Move camera to TU Sofia
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(TUsofia, 14));
 
-        // Buttons
+        // UI Buttons
         Button tusofiaB = findViewById(R.id.tusofia);
         Button unssB = findViewById(R.id.unss);
         Button ltyB = findViewById(R.id.lty);
         Button nsaB = findViewById(R.id.nsa);
+        Button sofiaLibraryB = findViewById(R.id.sofiaLibrary);
+        Button sofiaUniversityB = findViewById(R.id.sofiaUniversity);
+        Button ivanVazovB = findViewById(R.id.ivanVazov);
         Button line = findViewById(R.id.line);
         Button polygon = findViewById(R.id.polygon);
         Button back = findViewById(R.id.BACK);
 
-        if (tusofiaB == null || unssB == null || ltyB == null || nsaB == null || line == null || polygon == null || back == null) {
-            throw new NullPointerException("One or more buttons are NULL. Check XML IDs.");
-        }
+        Button plusZOOM = findViewById(R.id.zoomIN);
+        Button minusZOOM = findViewById(R.id.zoomOUT);
 
         // Event handlers
         tusofiaB.setOnClickListener(v -> moveCamera(TUsofia));
         unssB.setOnClickListener(v -> moveCamera(unss));
         ltyB.setOnClickListener(v -> moveCamera(lty));
         nsaB.setOnClickListener(v -> moveCamera(nsa));
+        sofiaLibraryB.setOnClickListener(v -> moveCamera(SofiaLibrary));
+        sofiaUniversityB.setOnClickListener(v -> moveCamera(SofiaUniversity));
+        ivanVazovB.setOnClickListener(v -> moveCamera(IvanVazovTheater));
+
+        // Zoom In
+        plusZOOM.setOnClickListener(v -> {
+            zoomvar = Math.min(21, zoomvar + 1); // Ensure zoom doesn't exceed 21
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(zoomvar));
+        });
+
+        // Zoom Out
+        minusZOOM.setOnClickListener(v -> {
+            zoomvar = Math.max(2, zoomvar - 1); // Ensure zoom doesn't go below 2
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(zoomvar));
+        });
 
         // Draw line between TU Sofia and UNSS
         line.setOnClickListener(v -> drawLine(TUsofia, unss));
@@ -91,6 +126,13 @@ public class PoiActivity extends FragmentActivity implements OnMapReadyCallback 
             startActivity(intent);
             finish();
         });
+    }
+
+    private BitmapDescriptor resizeBitmap(int drawableResId, int width, int height) {
+        Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(), drawableResId);
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, width, height, false);
+
+        return BitmapDescriptorFactory.fromBitmap(resizedBitmap);
     }
 
     private void addMarker(LatLng location, String title, float color) {

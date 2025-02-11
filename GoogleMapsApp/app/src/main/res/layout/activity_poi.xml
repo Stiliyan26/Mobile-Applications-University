@@ -120,4 +120,36 @@
             android:text="Back"
             android:textColor="#ffffff" />
 
+    <Button
+            android:id="@+id/sofiaLibrary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nsa"
+            android:background="#359c5e"
+            android:padding="8dp"
+            android:text="Sofia Library"
+            android:textColor="#ffffff" />
+
+    <!-- Sofia University Button -->
+    <Button
+            android:id="@+id/sofiaUniversity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sofiaLibrary"
+            android:background="#359c5e"
+            android:padding="8dp"
+            android:text="Sofia University"
+            android:textColor="#ffffff" />
+
+    <!-- Ivan Vazov Theater Button -->
+    <Button
+            android:id="@+id/ivanVazov"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sofiaUniversity"
+            android:background="#359c5e"
+            android:padding="8dp"
+            android:text="Ivan Vazov Theater"
+            android:textColor="#ffffff" />
+
 </RelativeLayout>

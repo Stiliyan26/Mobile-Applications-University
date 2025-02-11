@@ -24,6 +24,12 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
     private final LatLng SofiaCenter = new LatLng(42.6977082, 23.3218675);
     private final LatLng TUsofia = new LatLng(42.6570607, 23.3551086);
 
+
+    private final LatLng SofiaLibrary = new LatLng(42.696897, 23.325877);
+    private final LatLng SofiaUniversity = new LatLng(42.693978, 23.334181);
+    private final LatLng IvanVazovTheater = new LatLng(42.694978, 23.324604);
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +60,11 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
         mMap.addMarker(new MarkerOptions().position(SofiaCenter).title("Marker in Sofia Center"));
         mMap.addMarker(new MarkerOptions().position(TUsofia).title("Marker at TU Sofia"));
 
+
+        mMap.addMarker(new MarkerOptions().position(SofiaLibrary).title("Sofia Library"));
+        mMap.addMarker(new MarkerOptions().position(SofiaUniversity).title("Sofia University"));
+        mMap.addMarker(new MarkerOptions().position(IvanVazovTheater).title("Ivan Vazov Theater"));
+
         // Move camera to Sofia Center
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SofiaCenter, 10));
 
@@ -66,6 +77,10 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
         Button terrain = findViewById(R.id.terrainBUT);
         Button tus = findViewById(R.id.tusBUT);
         Button back = findViewById(R.id.BACK);
+
+        Button capitalLibraryBut = findViewById(R.id.capitalLibraryBut);
+        Button sofiaUniversityBut = findViewById(R.id.sofiaUniversityBut);
+        Button theaterBut = findViewById(R.id.theaterBut);
 
         CircleOptions circleOptions = new CircleOptions()
                 .center(TUsofia)
@@ -102,6 +117,11 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
 
         // Move to TU Sofia
         tus.setOnClickListener(v -> mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(TUsofia, 15)));
+
+        //Move to Libary
+        capitalLibraryBut.setOnClickListener(v -> mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(SofiaLibrary, 15)));
+        sofiaUniversityBut.setOnClickListener(v -> mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(SofiaUniversity, 15)));
+        theaterBut.setOnClickListener(v -> mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(IvanVazovTheater, 15)));
 
         // Back Button
         back.setOnClickListener(v -> {
