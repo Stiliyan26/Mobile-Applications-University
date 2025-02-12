@@ -19,7 +19,7 @@ public class PoiActivity extends FragmentActivity implements OnMapReadyCallback 
 
     private GoogleMap mMap;
     private float zoomvar = 10;
-    
+
     private final LatLng TUsofia = new LatLng(42.6570607, 23.3551086);
     private final LatLng unss = new LatLng(42.651266, 23.3466593);
     private final LatLng lty = new LatLng(42.6537179, 23.3564474);
