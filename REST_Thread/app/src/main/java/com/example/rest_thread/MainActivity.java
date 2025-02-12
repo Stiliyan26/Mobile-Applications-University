@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         AsyncHttpClient client = new AsyncHttpClient();
         Log.d("\n Android say: ", params.toString());
 
-        client.get("http://192.168.0.137:8080/useraccount/login/dologin", params, new AsyncHttpResponseHandler() {
+        client.get("http://10.0.2.2:8080/useraccount/login/dologin", params, new AsyncHttpResponseHandler() {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
