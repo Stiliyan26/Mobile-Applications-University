@@ -1,0 +1,16 @@
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\UserLogin.exe
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\UserLogin.deps.json
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\UserLogin.runtimeconfig.json
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\UserLogin.dll
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\UserLogin.pdb
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\UserLogin.csproj.AssemblyReference.cache
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\UserLogin.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\UserLogin.AssemblyInfoInputs.cache
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\UserLogin.AssemblyInfo.cs
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\UserLogin.csproj.CoreCompileInputs.cache
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\UserLogin.dll
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\refint\UserLogin.dll
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\UserLogin.pdb
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\UserLogin.genruntimeconfig.cache
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\ref\UserLogin.dll
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\UserLogin.dll.config

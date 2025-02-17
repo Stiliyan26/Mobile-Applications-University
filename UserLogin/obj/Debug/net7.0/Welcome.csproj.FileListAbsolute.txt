@@ -1,0 +1,16 @@
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\Welcome.exe
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\Welcome.dll.config
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\Welcome.deps.json
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\Welcome.runtimeconfig.json
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\Welcome.dll
+C:\GitHub\Mobile-Applications-University\UserLogin\bin\Debug\net7.0\Welcome.pdb
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\Welcome.csproj.AssemblyReference.cache
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\Welcome.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\Welcome.AssemblyInfoInputs.cache
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\Welcome.AssemblyInfo.cs
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\Welcome.csproj.CoreCompileInputs.cache
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\Welcome.dll
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\refint\Welcome.dll
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\Welcome.pdb
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\Welcome.genruntimeconfig.cache
+C:\GitHub\Mobile-Applications-University\UserLogin\obj\Debug\net7.0\ref\Welcome.dll
